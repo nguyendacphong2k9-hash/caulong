@@ -1308,7 +1308,7 @@ A.current=function(){return idx.cur?byId(idx.cur):null};
 A.accounts=function(){return idx.list.map(function(a){return{id:a.id,name:a.name}})};
 A.save=function(js){var a=A.current();if(a){wr(UP+a.id,js)}};
 A.data=function(){var a=A.current();return clean(a?rd(UP+a.id)||rd(K):rd(K))};
-var ADMH='6dce3cc5b819f1d81d496b25cd46bc8c260d860e34b2e18b9fa40354f46aafa6';
+var ADMH='eee33d236002e4b93584ea5f804806af47848ed716883156083f9b1f2fa04ad3';
 async function akey(k){try{var b=await crypto.subtle.digest('SHA-256',new TextEncoder().encode('cl3d-admin|'+String(k||'').trim()));return hex(new Uint8Array(b))}catch(e){return''}}
 A.create=async function(name,pw,adm,key){
   name=String(name||'').trim().replace(/\s+/g,' ');
